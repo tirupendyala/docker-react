@@ -8,4 +8,5 @@ RUN npm run build
 # /app/build is the only folder we require for production version of the app
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
